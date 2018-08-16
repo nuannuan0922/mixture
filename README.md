@@ -12,4 +12,7 @@
 3. chrome + android
 4. vConsole 对应 vconsole-test 文件夹
     - [中文文档](https://github.com/Tencent/vConsole/blob/dev/doc/a_doc_index_CN.md)
+5. weinre
+    - https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455784140
+    - https://link.juejin.im/?target=https%3A%2F%2Fgaohaoyang.github.io%2F2015%2F06%2F18%2Fweinre%2F
 
