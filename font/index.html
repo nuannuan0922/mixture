@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字体</title>
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/123560/46865/5ba9ef5bf629d90e80f4b4f9.css' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script type="text/javascript">
+        $youziku.load(".p", "d4c1063cfda046118a31ff531a4a9c11", "LiDeBiao-Xing3");
+        $youziku.draw(0);
+    </script>
+</head>
+<body>
+    <p style="font-family:'Source-Han-Ligh14b4f847141e2a8';"></p>
+    <p class="css14b4f847141e2a8"></p>
+    <p></p>
+    <p class="p"></p>
+    <button onclick="make()">点击渲染上一行</button>
+    <div>js 根据上一行修改下一行：</div>
+    <p class="update-p"></p>
+    <input type="text" placeholder="请输入文字" value="可以输入您想要展示的文字" onchange="change()">
+    <script>
+        function make() {
+            $youziku.submit('p');
+        }
+        function update() {
+            let p = document.querySelector('.p');
+            let updateP = document.querySelector('.update-p');
+            let font = getComputedStyle(p).fontFamily;
+            updateP.style.fontFamily = font;
+        }
+        function change() {
+            let input = document.querySelector('input');
+            let text = input.value;
+            let p = document.querySelectorAll('p');
+            Array.prototype.forEach.call(p, (item) => {
+                item.innerText = text;
+            })
+        }
+        change();
+        setInterval(update, 1000);
+    </script>
+</body>
+</html>
